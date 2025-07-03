@@ -23,21 +23,20 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
-// Database connection
 const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "", // Update with your MySQL password if required
-  database: "structured_db",
+  host: process.env.DB_HOST || "localhost",
+  user: process.env.DB_USER || "root",
+  password: process.env.DB_PASSWORD || "",
+database: process.env.DB_NAME || "structured_db",
 });
 
-// Connect to DB
+//Connect to DB
 db.connect((err) => {
   if (err) {
     console.error("DB connection error:", err);
-    return;
-  }
-  console.log("Connected to MySQL");
+   return;
+ }
+ console.log("Connected to MySQL");
 });
 
 // Nodemailer transporter configuration
@@ -70,7 +69,7 @@ app.post("/api/contact-form", (req, res) => {
       console.error("Insert error:", err);
       return res.status(500).json({ message: "Database error" });
     }
-
+  
     // Send email notification using Nodemailer
     const mailOptions = {
       from: process.env.SENDER,
@@ -78,7 +77,7 @@ app.post("/api/contact-form", (req, res) => {
       subject: "New Contact Message",
       text: `Name: ${name}\nEmail: ${email}\nMessage:\n${message}`,
     };
-
+    // Send email
     transporter.sendMail(mailOptions, (err, info) => {
       if (err) {
         console.error("Email error:", err);
@@ -89,15 +88,15 @@ app.post("/api/contact-form", (req, res) => {
     });
   });
 });
-// GET all
- app.get('/blogs', async (req, res) => {
-  try {
-    const [blogs] = await db.query('SELECT * FROM blogs ORDER BY created_at DESC');
-    res.render('blogs', { blogs }); // using EJS template
-  } catch (err) {
-    console.error(err);
-    res.status(500).send('Error loading blogs');
-  }
+app.get('/blogs', (req, res) => {
+  const sql = 'SELECT * FROM blogs ORDER BY created_at DESC';
+  db.query(sql, (err, results) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).send('Error loading blogs');
+    }
+    res.json(results);
+  });
 });
 
 

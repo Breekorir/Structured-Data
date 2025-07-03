@@ -28,26 +28,27 @@
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 />
-
+ <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Header -->
   <header>
      
     <div class="logo">
-        <a href="#hero"><img src="/images/logo.png" alt="Structured Data Logo" /></a></div>
-              <nav> <ul id="nav-links" class="nav-links">
-        <li><a href="#hero">Home</a></li>
+        <a href="#hero"><img src="images/logo.png" alt="Structured Data Logo" /></a></div>
+    <nav> <ul id="nav-links" class="nav-links">
         <li><a href="#about-section">About</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#team">Team</a></li>
         <li><a href="#case-studies">Products</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
         <li><a href="#cta">Contact</a></li>
+        <li><a href="blogs.html">Blogs</a></li>        
       </ul>    
        <button id="menu-toggle" class="menu-toggle">☰</button>   
+       <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle Dark Mode" title="Toggle Dark Mode">🌙</button>
     </nav>
   </header>
+
 
   <!-- Hero Section -->
   <section id="hero" class="hero">
@@ -61,7 +62,7 @@
   </section>
 
   <!-- About Us Section -->
-  <section class="about-section">
+  <section class="about-section" id="about-section">
   <h2 class="about-title">About Us</h2>
   <div class="about-content">
     <img src="/images/data2.jpg" alt="Data Analytics Dashboard" class="about-image" />
@@ -83,16 +84,16 @@
       <h2>Our Services</h2>
       <div class="grid">
         <div class="card">
-          <h3>Next Gen ERP solutions with AI intergration</h3>
-          <p>Seamlessly combine data from multiple sources to create a unified, accessible dataset for your business.</p>
+          <h3>Strategic Data Intelligence & Regulatory Excellence Advisory</h3>
+          <p>Empowering your organization to transform data into a strategic asset for informed decision-making and robust compliance through expert guidance and AI-driven insights.</p>
         </div>
         <div class="card">
-          <h3>KRA compliance with Intergrated automated tools to keep track of TAX position.</h3>
-          <p>Leverage advanced analytics to uncover insights and make data-driven decisions.</p>
+          <h3>Tensa: The AI-Powered Business Optimization Suite</h3>
+         <p>An intergrated ,AI-driven suite of business applications to streamline operationsand enhance productivity.</p>
         </div>
         <div class="card">
-          <h3>Custom automation tools for reconciliation and payments processing.</h3>
-          <p>Design and implement scalable cloud-based data architectures for flexibility and efficiency.</p>
+          <h3>Vanguard partnership program</h3>
+          <p>A priemier all-inclusive partnership to drive comprehensive data mastery and sustained growth.</p>
         </div>
       </div>
     </div>
@@ -126,20 +127,20 @@
       <h2>Our Technical Team</h2>
       <div class="grid">
         <div class="card">
-          <img src="https://images.unsplash.com/photo-1519085360753-afccb5e7b2c5" alt="Team member 1">
-          <h3>Jane Doe</h3>
+          <img src="/images/data1.jpg" alt="Team member 1">
+          <h3> CPA Anthony Kiplimo</h3>
           <p class="role">Data Engineer</p>
           <p>Expert in database optimization and ETL pipelines.</p>
         </div>
         <div class="card">
           <img src="https://images.unsplash.com/photo-1506794778202-6d6d8f9d8a1b" alt="Team member 2">
-          <h3>John Smith</h3>
+          <h3>Lucky Bera</h3>
           <p class="role">Data Scientist</p>
           <p>Specializes in machine learning and predictive analytics.</p>
         </div>
         <div class="card">
-          <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf2596f4" alt="Team member 3">
-          <h3>Emily Chen</h3>
+          <img src="images/photo1 - Copy.jpeg" alt="Team member 3">
+          <h3>Brian Yego</h3>
           <p class="role">Cloud Architect</p>
           <p>Designs scalable cloud-based data solutions.</p>
         </div>
@@ -166,6 +167,42 @@
       </div>
     </div>
   </section>
+  
+    <!-- Your Data Journey Section -->
+    <section id="journey" class="bg-gray-50 py-16 sm:py-20 px-4 rounded-xl shadow-inner">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-12">Your Data Journey with Structured Data Ltd.</h2>
+            <p class="text-lg text-gray-700 mb-10 max-w-3xl mx-auto">
+                Our services are designed to offer a progressive pathway to data excellence, allowing you to engage with us based on your current needs and evolve as your data maturity grows.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Journey Step 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md border border-gray-200 transform hover:shadow-lg hover:scale-105 transition duration-300">
+                    <div class="text-5xl mb-4 text-indigo-500">💡</div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-3">Crawl/Walk: Strategic Advisory</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Begin your journey by understanding your current data landscape, identifying challenges, and developing a strategic roadmap for effective data utilization and compliance. This phase is about assessment, strategy, and laying the groundwork.
+                    </p>
+                </div>
+                <!-- Journey Step 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md border border-gray-200 transform hover:shadow-lg hover:scale-105 transition duration-300">
+                    <div class="text-5xl mb-4 text-purple-500">⚙️</div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-3">Walk/Run: Tensa Toolkit Implementation</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Implement specific Tensa modules to automate processes, enhance data quality, and embed AI-driven analytics into your daily operations. This stage focuses on tangible implementation and realizing efficiencies.
+                    </p>
+                </div>
+                <!-- Journey Step 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md border border-gray-200 transform hover:shadow-lg hover:scale-105 transition duration-300">
+                    <div class="text-5xl mb-4 text-green-500">🚀</div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-3">Run/Soar: Enterprise Partnership</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        For organizations seeking comprehensive, end-to-end data transformation and continuous strategic guidance, the Vanguard Program offers the pinnacle of engagement. This integrates deep strategic advisory with the full power of the Tensa suite, supported by a dedicated team for ongoing partnership and innovation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
   <!-- Testimonials Section -->
   <section id="testimonials">
@@ -183,29 +220,6 @@
       </div>
     </div>
   </section>
-
-  <!-- CTA Section -->
-  <section id="cta">
-    <h2>Ready to Structure Your Data?</h2>
-    <p>Step into the future of business optimization and automation with the best in the business.</p>
- <section class="contact-section">
-  <h2 class="contact-title">Contact Us</h2>
-  <p class="contact-subtitle">Have questions? We'd love to hear from you.</p>
-  
-  <form class="contact-form">
-    <div class="form-group">
-      <input type="text" name="name" placeholder="Your Name" required />
-    </div>
-    <div class="form-group">
-      <input type="email" name="email" placeholder="Your Email" required />
-    </div>
-    <div class="form-group">
-      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-    </div>
-    <button type="submit" class="contact-button">Send Message</button>
-  </form>
-</section>
-    
   </section><section id="blogs">
   <div class="container">
     <h2>Latest Blog Posts</h2>
@@ -234,6 +248,23 @@
 </section>
 
 
+    <!-- Call to Action / Contact Section -->
+    <section id="contact" class="bg-gradient-to-r from-purple-700 to-indigo-600 text-white py-20 px-4 rounded-t-lg shadow-lg">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+                Ready to Unlock Your Data's Full Potential?
+            </h2>
+            <p class="text-lg sm:text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
+                Let us help you transform your data into a strategic asset that drives growth, ensures compliance, and boosts profitability.
+            </p>
+            <a href="#cta" class="inline-block bg-white text-purple-700 hover:bg-purple-100 px-8 py-4 rounded-full font-semibold text-lg shadow-xl transform hover:scale-105 transition duration-300 ease-in-out">
+                Contact Us Today
+            </a>
+            <p class="mt-8 text-sm opacity-80">
+                You can also reach us by phone: +1 (555) 123-4567
+            </p>
+        </div>
+    
   <!-- Footer -->
    </section><footer class="footer">
     <div class="footer-container">
@@ -251,10 +282,9 @@
   
       <div class="footer-section contact-info">
         <h4>Contact</h4>
-        <p><i class="fas fa-envelope"></i> <a href="mailto:structureddata@gmail.com">structureddata@gmail.com</a></p>
-        <p><i class="fas fa-phone"></i> <a href="tel:+0703130681">+254 703 130 681</a></p>
-        <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/" target="0728570564_blank">Chat on WhatsApp</a></p>
-      </div>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:@gmail.com">structureddata@gmail.com</a></p>
+        <p><i class="fas fa-phone"></i> <a href="tel:+254703130no681">+254 703 130 681</a></p>
+<p><i class="fab fa-whatsapp"></i> <a href="https://api.whatsapp.com/send?phone=+254703130no681" target="_blank">Chat on WhatsApp</a></p>      </div>
   
 
   
