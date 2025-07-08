@@ -60,6 +60,82 @@ nav ul {
   gap: 2.5rem;
   margin: 0;
   padding: 0;
+  position: relative;
+}
+
+.menu-close {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #1C4C7A;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.menu-close:hover {
+  color: #FFD700;
+}
+
+.nav-links {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background: #4682B4;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  padding: 1rem 0;
+  z-index: 100;
+  overflow-y: auto;
+  max-height: 80vh;
+  gap: 2rem;
+}
+
+.nav-links.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+.nav-links.show li a {
+  font-size: 1.5rem;
+  padding: 0.75rem 1.5rem;
+}
+
+@media (min-width: 769px) {
+  .nav-links {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    background: transparent;
+    width: auto;
+    max-width: none;
+    box-shadow: none;
+    padding: 0;
+    height: auto;
+    overflow: visible;
+  }
+
+  #menu-toggle {
+    display: none !important;
+  }
+
+  .menu-close {
+    display: none !important;
+  }
+}
+
+.nav-links.show .menu-close {
+  display: block;
 }
 
 #menu-toggle {
@@ -72,7 +148,33 @@ nav ul {
   transition: color 0.3s ease;
 }
 
-#menu-toggle:hover {
+#menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2.2rem;
+  color: #1C4C7A;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+#menu-toggle.open {
+  color: #FFD700;
+}
+
+#menu-toggle.open::after {
+  content: "×";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #FFD700;
+}
+
+#menu-toggle:hover:not(.open) {
   color: #4682B4;
 }
 
@@ -357,6 +459,8 @@ color: #1a73e8;
   text-align: center;
   border: 2px solid #B0E0E6;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  align-items: center;
+
 }
 
 #team .card:hover,
@@ -372,7 +476,10 @@ color: #1a73e8;
   border-radius: 50%;
   margin-bottom: 1rem;
   transition: transform 0.3s ease;
-  
+  align-self: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #team img:hover {

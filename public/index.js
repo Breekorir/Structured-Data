@@ -23,7 +23,16 @@ const navLinks = document.getElementById('nav-links');
 
 toggleBtn?.addEventListener('click', () => {
   navLinks.classList.toggle('show');
+  toggleBtn.classList.toggle('open');
 });
+
+const closeBtn = document.getElementById('menu-close');
+if (closeBtn) {
+  closeBtn.addEventListener('click', () => {
+    navLinks.classList.remove('show');
+    toggleBtn.classList.remove('open');
+  });
+}
 
 // Dark mode toggle
 const darkModeToggle = document.getElementById('dark-mode-toggle');
