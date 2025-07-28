@@ -230,3 +230,12 @@ document.querySelectorAll('img').forEach(img => {
     img.loading = 'lazy';
   }
 });
+      const cards = document.querySelectorAll('.card');
+
+        // Add click event listener to each card
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                // Toggle the 'active' class on the clicked card
+                card.classList.toggle('active');
+            });
+        });

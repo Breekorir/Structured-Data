@@ -320,6 +320,7 @@ color: #1a73e8;
   outline: none;
 }
 
+
 /* About Section */
 .about-section {
   padding: 5rem 2rem;
@@ -366,14 +367,229 @@ color: #1a73e8;
   line-height: 1.8;
   max-width: 650px;
 }
+/* General Body Styles (optional, but good for a complete page) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+/* Your Data Journey Section */
+#journey {
+    background-color: #f9fafb; /* Light gray background */
+    padding: 4rem 1rem; /* py-16 px-4 */
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); /* shadow-inner */
+}
+
+@media (min-width: 640px) { /* Small screens and up */
+    #journey {
+        padding: 5rem 1rem; /* sm:py-20 */
+    }
+}
+
+#journey .container {
+    max-width: 1200px; /* Equivalent to mx-auto for a common container width */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#journey h2 {
+    font-size: 2.25rem; /* text-3xl */
+    font-weight: 700; /* font-bold */
+    color: #374151; /* text-gray-800 */
+    margin-bottom: 3rem; /* mb-12 */
+}
+
+@media (min-width: 640px) { /* Small screens and up */
+    #journey h2 {
+        font-size: 2.5rem; /* sm:text-4xl */
+    }
+}
+
+#journey p {
+    font-size: 1.125rem; /* text-lg */
+    color: #4b5563; /* text-gray-700 */
+    margin-bottom: 2.5rem; /* mb-10 */
+    max-width: 48rem; /* max-w-3xl */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#journey .grid {
+    display: grid;
+    grid-template-columns: 1fr; /* grid-cols-1 */
+    gap: 2rem; /* gap-8 */
+}
+
+@media (min-width: 768px) { /* Medium screens and up */
+    #journey .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr)); /* md:grid-cols-3 */
+    }
+}
+
+#journey .grid > div {
+    background-color: #ffffff; /* bg-white */
+    padding: 2rem; /* p-8 */
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+    border: 1px solid #e5e7eb; /* border border-gray-200 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* transition duration-300 */
+}
+
+#journey .grid > div:hover {
+    transform: scale(1.05); /* hover:scale-105 */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* hover:shadow-lg */
+}
+
+#journey .grid .icon { /* The emoji div */
+    font-size: 3.125rem; /* text-5xl */
+    margin-bottom: 1rem; /* mb-4 */
+}
+
+/* Specific emoji colors */
+#journey .grid .icon.indigo {
+    color: #6366f1; /* text-indigo-500 */
+}
+
+#journey .grid .icon.purple {
+    color: #a855f7; /* text-purple-500 */
+}
+
+#journey .grid .icon.green {
+    color: #22c55e; /* text-green-500 */
+}
+
+#journey .grid h3 {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 600; /* font-semibold */
+    color: #374151; /* text-gray-800 */
+    margin-bottom: 0.75rem; /* mb-3 */
+}
+
+#journey .grid p {
+    color: #4b5563; /* text-gray-600 */
+    line-height: 1.625; /* leading-relaxed */
+    margin-bottom: 0; /* Override default p margin-bottom if needed */
+}
 /* Services Section */
+/* Contact Section */
+#contact {
+    background:  #1C4C7A; /* bg-gradient-to-r from-purple-700 to-indigo-600 */
+    color: #ffffff; /* text-white */
+    padding: 5rem 1rem; /* py-20 px-4 */
+    border-top-left-radius: 0.75rem; /* rounded-t-lg */
+    border-top-right-radius: 0.75rem; /* rounded-t-lg */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+}
+
+#contact .container {
+    max-width: 1200px; /* mx-auto */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: 700; /* font-bold */
+    margin-bottom: 1.5rem; /* mb-6 */
+    color: #ffffff; /* text-white */
+}
+
+@media (min-width: 640px) { /* sm */
+    #contact h2 {
+        font-size: 2.25rem; /* sm:text-4xl */
+    }
+}
+
+@media (min-width: 768px) { /* md */
+    #contact h2 {
+        font-size: 3rem; /* md:text-5xl */
+    }
+}
+
+#contact p {
+    font-size: 1.125rem; /* text-lg */
+    margin-bottom: 2rem; /* mb-8 */
+    max-width: 48rem; /* max-w-3xl */
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.9; /* opacity-90 */
+    color:  #ffffff; /* text-white */
+
+}
+
+@media (min-width: 640px) { /* sm */
+    #contact p {
+        font-size: 1.25rem; /* sm:text-xl */
+    }
+}
+
+@media (min-width: 768px) { /* md */
+    #contact p {
+        font-size: 1.5rem; /* md:text-2xl */
+    }
+}
+
+#contact .button {
+    display: inline-block; /* inline-block */
+    background-color: #ffffff; /* bg-white */
+    color: #6b21a8; /* text-purple-700 */
+    padding: 1rem 2rem; /* px-8 py-4 */
+    border-radius: 9999px; /* rounded-full */
+    font-weight: 600; /* font-semibold */
+    font-size: 1.125rem; /* text-lg */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); /* shadow-xl */
+    transform: scale(1); /* Initial transform for transition */
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out; /* transition duration-300 ease-in-out */
+    text-decoration: none; /* Remove underline from link */
+}
+
+#contact .button:hover {
+    background-color: #f3e8ff; /* hover:bg-purple-100 */
+    transform: scale(1.05); /* hover:scale-105 */
+}
+
+#contact .contact-info {
+    margin-top: 2rem; /* mt-8 */
+    font-size: 0.875rem; /* text-sm */
+    opacity: 0.8; /* opacity-80 */
+}
+
+#contact .contact-info a {
+    color: inherit; /* Inherit color from parent */
+    text-decoration: underline; /* Underline links in contact info */
+}
 #services {
   padding: 5rem 1rem;
   background-color: #B0E0E6;
   border-radius: 12px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
 }
+   .card-content {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+        }
+
+        .card.active .card-content {
+            max-height: 500px; /* Sufficiently large value to accommodate content */
+            opacity: 1;
+            transition: max-height 0.7s ease-in, opacity 0.7s ease-in;
+        }
+
+        /* Specific styling for the button to always be visible */
+        .card-button {
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .card:not(.active) .card-button {
+            opacity: 1; /* Ensure button is always visible */
+        }
 
 #services .container {
   max-width: 1200px;

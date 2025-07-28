@@ -1,312 +1,332 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Structured Data | Quality Data Services in Kenya</title>
-        <meta name="description" content=" Structured data We provide cutting-edge data structuring solutions to unlock your business potential." />
-        <meta name="keywords" content="Structured Data right data informed decisions Eldoret" />
-        <meta name="author" content="Laxicone Builders" />
-        
-        <!-- Open Graph for social sharing -->
-        <meta property="og:title" content="Stuctured Data|Right Data,Informed Decisions" />
-        <meta property="og:description" content="Affordable and reliable construction services in Kenya. Get your project done professionally with Laxicone Builders." />
-        <meta property="og:image" content="https://yourdomain.com/images/og-image.jpg" />
-        <meta property="og:url" content="https://yourdomain.com/" />
-        <meta property="og:type" content="website" />
-      
-        <!-- Twitter Card -->
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Stuctured Data|Right Data,Informed Decisions" />
-        <meta name="twitter:description" content="" />
-        <meta name="twitter:image" content="https://yourdomain.com/images/og-image.jpg" />
-      
-        <link rel="canonical" href="https://yourdomain.com/" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="stylesheet" href="styles.css" />
-        <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-/>
- <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Structured Data | Quality Data Services in Kenya</title>
+    <meta name="description" content=" Structured data We provide cutting-edge data structuring solutions to unlock your business potential." />
+    <meta name="keywords" content="Structured Data right data informed decisions Eldoret" />
+    <meta name="author" content="Laxicone Builders" />
+
+    <!-- Open Graph for social sharing -->
+    <meta property="og:title" content="Stuctured Data|Right Data,Informed Decisions" />
+    <meta property="og:description" content="Affordable and reliable construction services in Kenya. Get your project done professionally with Laxicone Builders." />
+    <meta property="og:image" content="https://yourdomain.com/images/og-image.jpg" />
+    <meta property="og:url" content="https://yourdomain.com/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Stuctured Data|Right Data,Informed Decisions" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="https://yourdomain.com/images/og-image.jpg" />
+
+    <link rel="canonical" href="https://yourdomain.com/" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Custom styles for smooth transitions for interactive cards */
+        .card-content {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+        }
+
+        .card.active .card-content {
+            max-height: 500px; /* Sufficiently large value to accommodate content */
+            opacity: 1;
+            transition: max-height 0.7s ease-in, opacity 0.7s ease-in;
+        }
+
+        /* Specific styling for the button to always be visible */
+        .card-button {
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .card:not(.active) .card-button {
+            opacity: 1; /* Ensure button is always visible */
+        }
+    </style>
 </head>
 <body>
-  <!-- Header -->
-  <header>
-     
-    <div class="logo">
-        <a href="#hero"><img src="images/logo.png" alt="Structured Data Logo" /></a></div>
-      <ul id="nav-links" class="nav-links">
-        <li><button id="menu-close" class="menu-close" aria-label="Close Menu">×</button></li>
-        <li><a href="#about-section">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#case-studies">Products</a></li>
-        <li><a href="#cta">Contact</a></li>
-        <li><a href="blogs.html">Blogs</a></li>        
-      </ul>    
-       <button id="menu-toggle" class="menu-toggle">☰</button>   
-       <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle Dark Mode" title="Toggle Dark Mode">🌙</button>
-    </nav>
-  </header>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="#hero"><img src="images/logo.png" alt="Structured Data Logo" /></a>
+        </div>
+        <ul id="nav-links" class="nav-links">
+            <li><button id="menu-close" class="menu-close" aria-label="Close Menu">×</button></li>
+            <li><a href="#about-section">About</a></li>
+            <li><a href="#journey">Your journey</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="#cta">Contact</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+        </ul>
+        <button id="menu-toggle" class="menu-toggle">☰</button>
+        <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle Dark Mode" title="Toggle Dark Mode">🌙</button>
+    </header>
 
 
-  <!-- Hero Section -->
-  <section id="hero" class="hero">
-    <div class="backdrop"></div>
-    <div class="container">
-      <div class="text">
-        <h1>Right Data, Informed Decisions</h1>
-        <p>We provide cutting-edge data structuring solutions to unlock your business potential.</p>
-      </div>
-    </div>
-  </section>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="backdrop"></div>
+        <div class="container">
+            <div class="text">
+                <h1>Right Data, Informed Decisions</h1>
+                <p>We provide cutting-edge data structuring solutions to unlock your business potential.</p>
+            </div>
+        </div>
+    </section>
 
-  <!-- About Us Section -->
-  <section class="about-section" id="about-section">
-  <h2 class="about-title">About Us</h2>
-  <div class="about-content">
-    <img src="/images/data2.jpg" alt="Data Analytics Dashboard" class="about-image" />
-    <div class="about-text">
-      <p>
-        At <strong>Structured Data</strong>, we are committed to redefining data optimization
-        through <strong>AI</strong> and <strong>automation</strong>.
-      </p>
-      <p>
-        Our goal is to help businesses unlock the full potential of their data by transforming it into a strategic asset—driving growth, ensuring compliance, and boosting profitability.
-      </p>
-    </div>
-  </div>
-</section>
+    <!-- About Us Section -->
+    <section class="about-section" id="about-section">
+        <h2 class="about-title">About Us</h2>
+        <div class="about-content">
+            <img src="/images/data2.jpg" alt="Data Analytics Dashboard" class="about-image" />
+            <div class="about-text">
+                <p>
+                    At <strong>Structured Data</strong>, we are committed to redefining data optimization
+                    through <strong>AI</strong> and <strong>automation</strong>.
+                </p>
+                <p>
+                    Our goal is to help businesses unlock the full potential of their data by transforming it into a strategic asset—driving growth, ensuring compliance, and boosting profitability.
+                </p>
+            </div>
+        </div>
+    </section>
 
-  <!-- Services Section -->
-  <section id="services">
-    <div class="container">
-      <h2>Our Services</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Strategic Data Intelligence & Regulatory Excellence Advisory</h3>
-          <p>Empowering your organization to transform data into a strategic asset for informed decision-making and robust compliance through expert guidance and AI-driven insights.</p>
-        </div>
-        <div class="card">
-          <h3>Tensa: The AI-Powered Business Optimization Suite</h3>
-         <p>An intergrated ,AI-driven suite of business applications to streamline operationsand enhance productivity.</p>
-        </div>
-        <div class="card">
-          <h3>Vanguard partnership program</h3>
-          <p>A priemier all-inclusive partnership to drive comprehensive data mastery and sustained growth.</p>
-        </div>
-      </div>
-    </div>
-  </section>
- <section id="cta">
-    <h2>Ready to Structure Your Data?</h2>
-    <p>Partner with the most reliable name in Digital technology</p>
-    <section class="contact-section">
-  <h2 class="contact-title">Contact Us</h2>
-  <p class="contact-subtitle">Have questions? We'd love to hear from you.</p>
-  
-  <form class="contact-form"id="contact-form">
-    <div class="form-group">
-      <input type="text" name="name" placeholder="Your Name" required />
-    </div>
-    <div class="form-group">
-      <input type="email" name="email" placeholder="Your Email" required />
-    </div>
-    <div class="form-group">
-      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-    </div>
-    <button type="submit" class="contact-button">Send Message</button>
-  </form>
-</section>
-
-  </section>
-
-  <!-- Technical Team Section -->
-  <section id="team">
-    <div class="container">
-      <h2>Our Technical Team</h2>
-      <div class="grid">
-        <div class="card">
-          <img src="/images/data1.jpg" alt="Team member 1">
-          <h3> CPA Anthony Kiplimo</h3>
-          <p class="role">Data Engineer</p>
-          <p>Expert in database optimization and ETL pipelines.</p>
-        </div>
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1506794778202-6d6d8f9d8a1b" alt="Team member 2">
-          <h3>Lucky Bera</h3>
-          <p class="role">Data Scientist</p>
-          <p>Specializes in machine learning and predictive analytics.</p>
-        </div>
-        <div class="card">
-          <img src="images/photo1 - Copy.jpeg" alt="Team member 3">
-          <h3>Brian Yego</h3>
-          <p class="role">Cloud Architect</p>
-          <p>Designs scalable cloud-based data solutions.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Case Studies Section -->
-  <section id="case-studies">
-    <div class="container">
-      <h2>Products</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Tensa Fuel Management System</h3>
-          <p>Streamlined a retail client's data pipeline, reducing processing time by 40% and improving inventory forecasting.</p>
-        </div>
-        <div class="card">
-          <h3>TENSA ERP</h3>
-          <p>Developed a predictive analytics model for a healthcare provider, enhancing patient outcome predictions by 25%.</p>
-        </div>
-        <div class="card">
-          <h3>Tensa KRA invoice tool</h3>
-          <p>Implemented a cloud-based data architecture for a financial institution, improving data accessibility and security.</p>
-      </div>
-    </div>
-  </section>
-  
-    <!-- Your Data Journey Section -->
-    <section id="journey" class="bg-gray-50 py-16 sm:py-20 px-4 rounded-xl shadow-inner">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-12">Your Data Journey with Structured Data Ltd.</h2>
-            <p class="text-lg text-gray-700 mb-10 max-w-3xl mx-auto">
+    <!-- Your Data Journey Section - Now with interactive cards -->
+    <section id="journey" class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Your Data Journey with Structured Data Ltd.</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
                 Our services are designed to offer a progressive pathway to data excellence, allowing you to engage with us based on your current needs and evolve as your data maturity grows.
             </p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Journey Step 1 -->
-                <div class="bg-white p-8 rounded-xl shadow-md border border-gray-200 transform hover:shadow-lg hover:scale-105 transition duration-300">
-                    <div class="text-5xl mb-4 text-indigo-500">💡</div>
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-3">Crawl/Walk: Strategic Advisory</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Begin your journey by understanding your current data landscape, identifying challenges, and developing a strategic roadmap for effective data utilization and compliance. This phase is about assessment, strategy, and laying the groundwork.
-                    </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+
+                <!-- Card 1: Crawl/Walk -->
+                <div id="card1" class="card bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center cursor-pointer hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-4xl mb-4 text-yellow-500">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h2 class="text-xl font-semibold mb-2 text-gray-800">Crawl/Walk: Strategic Advisory</h2>
+                    <div class="card-content text-gray-600">
+                        <p class="mb-4">Begin your journey by understanding your current data landscape, identifying challenges, and developing a strategic roadmap for effective data utilization and compliance. This phase is about assessment, strategy, and laying the groundwork.</p>
+                    </div>
                 </div>
-                <!-- Journey Step 2 -->
-                <div class="bg-white p-8 rounded-xl shadow-md border border-gray-200 transform hover:shadow-lg hover:scale-105 transition duration-300">
-                    <div class="text-5xl mb-4 text-purple-500">⚙️</div>
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-3">Walk/Run: Tensa Toolkit Implementation</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Implement specific Tensa modules to automate processes, enhance data quality, and embed AI-driven analytics into your daily operations. This stage focuses on tangible implementation and realizing efficiencies.
-                    </p>
+
+                <!-- Card 2: Walk/Run -->
+                <div id="card2" class="card bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center cursor-pointer hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-4xl mb-4 text-purple-500">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <h2 class="text-xl font-semibold mb-2 text-gray-800">Walk/Run: Tensa Toolkit Implementation</h2>
+                    <div class="card-content text-gray-600">
+                        <p class="mb-4">Implement specific Tensa modules to automate processes, enhance data quality, and embed AI-driven analytics into your daily operations. This stage focuses on tangible implementation and realizing efficiencies.</p>
+                    </div>
+                    <button class="card-button mt-4 px-6 py-3 bg-yellow-400 text-gray-800 font-bold rounded-full shadow hover:bg-yellow-500 transition-colors duration-300">
+                        View Products
+                    </button>
                 </div>
-                <!-- Journey Step 3 -->
-                <div class="bg-white p-8 rounded-xl shadow-md border border-gray-200 transform hover:shadow-lg hover:scale-105 transition duration-300">
-                    <div class="text-5xl mb-4 text-green-500">🚀</div>
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-3">Run/Soar: Enterprise Partnership</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        For organizations seeking comprehensive, end-to-end data transformation and continuous strategic guidance, the Vanguard Program offers the pinnacle of engagement. This integrates deep strategic advisory with the full power of the Tensa suite, supported by a dedicated team for ongoing partnership and innovation.
-                    </p>
+
+                <!-- Card 3: Run/Soar -->
+                <div id="card3" class="card bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center cursor-pointer hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-4xl mb-4 text-red-500">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h2 class="text-xl font-semibold mb-2 text-gray-800">Run/Soar: Enterprise Partnership</h2>
+                    <div class="card-content text-gray-600">
+                        <p class="mb-4">For organizations seeking comprehensive, end-to-end data transformation and continuous strategic guidance, the Vanguard Program offers the pinnacle of engagement. This integrates deep strategic advisory with the full power of the Tensa suite, supported by a dedicated team for ongoing partnership and innovation.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Team Section -->
+    <section id="team">
+        <div class="container">
+            <h2>Our Technical Team</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="/images/data1.jpg" alt="Team member 1">
+                    <h3> CPA Anthony Kiplimo</h3>
+                    <p class="role">Public Accountant</p>
+                    <p>Ensure financial accuracy and compliance.</p>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1506794778202-6d6d8f9d8a1b" alt="Team member 2">
+                    <h3>Lucky Bera</h3>
+                    <p class="role">Data Scientist</p>
+                    <p>Specializes in machine learning and predictive analytics.</p>
+                </div>
+                <div class="card">
+                    <img src="images/photo1 - Copy.jpeg" alt="Team member 3">
+                    <h3>Brian Yego</h3>
+                    <p class="role">Data Solutions Architect</p>
+                    <p>Designs data solutions for client needs.</p>
                 </div>
             </div>
         </div>
     </section>
 
-  <!-- Testimonials Section -->
-  <section id="testimonials">
-    <div class="container">
-      <h2>Client Testimonials</h2>
-      <div class="grid">
-        <div class="card">
-          <p>"DataStruct Solutions transformed our data operations, making insights accessible and actionable."</p>
-          <p class="author">Sarah Johnson, CEO</p>
+    <!-- Services Section -->
+
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <div class="container">
+            <h2>Client Testimonials</h2>
+            <div class="grid">
+                <div class="card">
+                    <p>"DataStruct Solutions transformed our data operations, making insights accessible and actionable."</p>
+                    <p class="author">Sarah Johnson, CEO</p>
+                </div>
+                <div class="card">
+                    <p>"Their expertise in cloud solutions saved us significant costs and improved our scalability."</p>
+                    <p class="author">Michael Lee, CTO</p>
+                </div>
+            </div>
         </div>
-        <div class="card">
-          <p>"Their expertise in cloud solutions saved us significant costs and improved our scalability."</p>
-          <p class="author">Michael Lee, CTO</p>
+    </section>
+
+    <section id="cta">
+        <h2>Ready to Structure Your Data?</h2>
+        <p>Partner with the most reliable name in Digital technology</p>
+        <section class="contact-section">
+            <h2 class="contact-title">Contact Us</h2>
+            <p class="contact-subtitle">Have questions? We'd love to hear from you.</p>
+
+            <form class="contact-form"id="contact-form">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required />
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email" required />
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="contact-button">Send Message</button>
+            </form>
+        </section>
+
+    </section>
+    </section><section id="blogs">
+        <div class="container">
+            <h2>Latest Blog Posts</h2>
+            <div class="grid">
+
+                <article class="card blog-post">
+                    <h3>Top 5 Benefits of Structured Data in Business</h3>
+                    <p>Discover how structured data enhances decision-making and boosts productivity.</p>
+                    <a href="https://www.linkedin.com/posts/your-company-post1" target="_blank">Read More on LinkedIn</a>
+                </article>
+
+                <article class="card blog-post">
+                    <h3>AI in ERP: The Future of Business Automation</h3>
+                    <p>AI-powered ERP tools are reshaping how companies manage operations and data.</p>
+                    <a href="https://www.linkedin.com/posts/your-company-post2" target="_blank">Read More on LinkedIn</a>
+                </article>
+
+                <article class="card blog-post">
+                    <h3>Tax Management Made Simple</h3>
+                    <p>Automated tools can help businesses remain KRA compliant effortlessly.</p>
+                    <a href="https://www.linkedin.com/posts/your-company-post3" target="_blank">Read More on LinkedIn</a>
+                </article>
+
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
-  </section><section id="blogs">
-  <div class="container">
-    <h2>Latest Blog Posts</h2>
-    <div class="grid">
-
-      <article class="card blog-post">
-        <h3>Top 5 Benefits of Structured Data in Business</h3>
-        <p>Discover how structured data enhances decision-making and boosts productivity.</p>
-        <a href="https://www.linkedin.com/posts/your-company-post1" target="_blank">Read More on LinkedIn</a>
-      </article>
-
-      <article class="card blog-post">
-        <h3>AI in ERP: The Future of Business Automation</h3>
-        <p>AI-powered ERP tools are reshaping how companies manage operations and data.</p>
-        <a href="https://www.linkedin.com/posts/your-company-post2" target="_blank">Read More on LinkedIn</a>
-      </article>
-
-      <article class="card blog-post">
-        <h3>Tax Management Made Simple</h3>
-        <p>Automated tools can help businesses remain KRA compliant effortlessly.</p>
-        <a href="https://www.linkedin.com/posts/your-company-post3" target="_blank">Read More on LinkedIn</a>
-      </article>
-
-    </div>
-  </div>
-</section>
+    </section>
 
 
     <!-- Call to Action / Contact Section -->
-    <section id="contact" class="bg-gradient-to-r from-purple-700 to-indigo-600 text-white py-20 px-4 rounded-t-lg shadow-lg">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+
+    <section id="contact">
+        <div class="container">
+            <h2>
                 Ready to Unlock Your Data's Full Potential?
             </h2>
-            <p class="text-lg sm:text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
+            <p>
                 Let us help you transform your data into a strategic asset that drives growth, ensures compliance, and boosts profitability.
             </p>
-            <a href="#cta" class="inline-block bg-white text-purple-700 hover:bg-purple-100 px-8 py-4 rounded-full font-semibold text-lg shadow-xl transform hover:scale-105 transition duration-300 ease-in-out">
+            <a href="#cta" class="button">
                 Contact Us Today
             </a>
-            <p class="mt-8 text-sm opacity-80">
-                You can also reach us by phone: +1 (555) 123-4567
+            <p class="contact-info">
+                You can also reach us by phone: +254 797 785 532 or email: <a href="mailto:info@strucureddata.co.ke">info@strucureddata.co.ke</a>
             </p>
         </div>
-    
-  <!-- Footer -->
-   </section><footer class="footer">
-    <div class="footer-container">
-      <div class="footer-section company-info">
-        <h3>Structured Data</h3>
-        <p>&copy; 2025 Structured Data. All rights reserved.</p>
-      </div>
-  
-      <div class="footer-section footer-links">
-        <h4>Quick Links</h4>
-        <a href="#about-section"><i class="fas fa-info-circle"></i> About</a>
-        <a href="#services"><i class="fas fa-cogs"></i> Services</a>
-        <a href="#cta"><i class="fas fa-envelope"></i> Contact</a>
-      </div>
-  
-      <div class="footer-section contact-info">
-        <h4>Contact</h4>
-        <p><i class="fas fa-envelope"></i> <a href="mailto:@gmail.com">structureddata@gmail.com</a></p>
-        <p><i class="fas fa-phone"></i> <a href="tel:+254703130no681">+254 703 130 681</a></p>
-<p><i class="fab fa-whatsapp"></i> <a href="https://api.whatsapp.com/send?phone=+254703130no681" target="_blank">Chat on WhatsApp</a></p>      </div>
-  
+    </section>
 
-  
-      <div class="footer-section social-media">
-        <div class="footer-section social-media">
-            <h4>Follow Us</h4>
-            <div class="social-icons">
-              <a href="https://facebook.com/stuctureddata" target="_blank"><i class="fab fa-facebook-f"></i></a>
-              <a href="https://instagram.com/brigid_korir" target="_blank"><i class="fab fa-instagram"></i></a>
-              <a href="https://linkedin.com/company/stuctureddata" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-              <a href="https://twitter.com/stuctureddata" target="_blank"><i class="fab fa-twitter"></i></a>
-              <a href="https://youtube.com/@stuctureddata" target="_blank"><i class="fab fa-youtube"></i></a>
+    <!-- Footer -->
+    </section><footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section company-info">
+                <h3>Structured Data</h3>
+                <p>&copy; 2025 Structured Data. All rights reserved.</p>
             </div>
-          </div>
-          </div>
-      </div>
-    </div>
-  </footer>
-  
 
-  <!-- JavaScript for Interactivity -->
-    <script src="index.js"></script>
+            <div class="footer-section footer-links">
+                <h4>Quick Links</h4>
+                <a href="#about-section"><i class="fas fa-info-circle"></i> About</a>
+                <a href="#services"><i class="fas fa-cogs"></i> Services</a>
+                <a href="#cta"><i class="fas fa-envelope"></i> Contact</a>
+            </div>
+
+            <div class="footer-section contact-info">
+                <h4>Contact</h4>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:@gmail.com">structureddata@gmail.com</a></p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+254703130no681">+254 703 130 681</a></p>
+                <p><i class="fab fa-whatsapp"></i> <a href="https://api.whatsapp.com/send?phone=+254703130no681" target="_blank">Chat on WhatsApp</a></p>
+            </div>
+
+
+            <div class="footer-section social-media">
+                <div class="footer-section social-media">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="https://facebook.com/stuctureddata" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/brigid_korir" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com/company/stuctureddata" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://twitter.com/stuctureddata" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://youtube.com/@stuctureddata" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Get all card elements
+        const cards = document.querySelectorAll('.card');
+
+        // Add click event listener to each card
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                // Toggle the 'active' class on the clicked card
+                card.classList.toggle('active');
+            });
+        });
+
+        // Existing JavaScript from index.js (if any, would go here)
+        // For example, if you had menu toggle logic in index.js:
+        // const menuToggle = document.getElementById('menu-toggle');
+        // const navLinks = document.getElementById('nav-links');
+        // menuToggle.addEventListener('click', () => {
+        //     navLinks.classList.toggle('active');
+        // });
+    </script>
 </body>
 </html>

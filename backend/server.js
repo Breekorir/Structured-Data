@@ -30,7 +30,7 @@ const db = mysql.createConnection({
 database: process.env.DB_NAME || "structured_db",
 });
 
-//Connect to DB
+//Connect to Db
 db.connect((err) => {
   if (err) {
     console.error("DB connection error:", err);
